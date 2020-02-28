@@ -266,7 +266,7 @@ console.log(whatDoYouDo("retired", "Mark"));
 /**
  * Arrays
  */
-
+/*
 // Intialize new array
 var names = ["John", "Mark", "Jane"];
 var years = new Array(1990, 1969, 1948);
@@ -298,3 +298,35 @@ var isDesigner =
     ? "John is NOT a designer"
     : "John IS a designer";
 console.log(isDesigner);
+*/
+
+/**
+ * Objects and properties
+ */
+
+// Object literal
+var john = {
+  firstName: "John",
+  lastName: "Smith",
+  birthYear: 1990,
+  family: ["Jane", "Mark", "Bob", "Emily"],
+  job: "teacher",
+  isMarried: false
+};
+
+console.log(john);
+console.log(john.firstName);
+console.log(john["lastName"]);
+var x = "birthYear";
+console.log(john[x]);
+
+john.job = "designer";
+john["isMarried"] = true;
+console.log(john);
+
+// new Object syntax
+var jane = new Object();
+jane.firstName = "Jane";
+jane.birthYear = 1969;
+jane["lastName"] = "Smith";
+console.log(jane);
