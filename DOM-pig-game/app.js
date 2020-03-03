@@ -83,7 +83,7 @@ function init() {
   scores = [0, 0];
   activePlayer = 0;
   roundScore = 0;
-  gamePlaying = false;
+  gamePlaying = true;
 
   document.querySelector(".dice").style.display = "none";
 
