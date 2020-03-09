@@ -1,7 +1,7 @@
 /**
  * `let` and `const`
  */
-
+/*
 // ES5
 var name5 = "Jane Smith";
 var age5 = 23;
@@ -47,3 +47,25 @@ function driversLicence(passedTest) {
 }
 
 driversLicence(true);
+*/
+
+/**
+ * Blocks and IIFEs
+ */
+
+// ES6
+{
+  const a = 1;
+  let b = 2;
+  var c = 3;
+}
+
+// console.log(a + b); // Making reference error
+console.log(c);
+
+// ES5
+(function() {
+  var c = 3;
+})();
+
+console.log(c);
