@@ -113,7 +113,7 @@ console.log(`${firstName}`.repeat(5));
 /**
  * Arrow functions
  */
-
+/*
 const years = [1990, 1965, 1982, 1937];
 
 // ES5
@@ -165,21 +165,6 @@ let box6 = {
 };
 box6.clickMe();
 
-/*
-box6 = {
-  color: "green",
-  position: 1,
-  clickMe: () => {
-    document.querySelector(".green").addEventListener("click", () => {
-      var str =
-        "This is box number " + this.position + " and it is " + this.color;
-      alert(str);
-    });
-  }
-};
-box6.clickMe();
-*/
-
 function Person(name) {
   this.name = name;
 }
@@ -207,3 +192,40 @@ Person.prototype.myFriends6 = function(friends) {
   console.log(arr);
 };
 new Person("Mike").myFriends6(friends);
+*/
+
+/**
+ * Destructuring
+ */
+
+// ES5
+var john = ["John", 26];
+var name5 = john[0];
+var age5 = john[1];
+
+// ES6
+const [name6, age6] = ["Mark", 28];
+console.log(name6);
+console.log(age6);
+
+const obj = {
+  firstName: "John",
+  lastName: "Smith"
+};
+
+const { firstName, lastName } = obj;
+console.log(firstName);
+console.log(lastName);
+
+const { firstName: a, lastName: b } = obj;
+console.log(a);
+console.log(b);
+
+function calcAgeRetirement(year) {
+  const age = new Date().getFullYear() - year;
+  return [age, 65 - age];
+}
+
+const [age, retirement] = calcAgeRetirement(1990);
+console.log(age);
+console.log(retirement);
